@@ -1,0 +1,8 @@
+mixin reviews(title)
+  +b.SECTION.reviews-main.section.section_light
+    +e.in.section__in
+      +e.title-wrapper.section__title-wrapper
+        +e.H2.title.section__title.section__title_single.title-center.js-animate-title#reviews= title
+      +b.reviewsCarousel
+        +e.in.dragscroll#reviewsCarouselWrapper
+          .main-reviews-cards.reviewsCarousel__line.hidden#reviewsCarouselLine(data-loaded='false')

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "title_datas",
+  "info": {
+    "singularName": "title-data",
+    "pluralName": "title-datas",
+    "displayName": "TitleData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

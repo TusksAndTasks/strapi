@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_numbers",
+  "info": {
+    "singularName": "data-number",
+    "pluralName": "data-numbers",
+    "displayName": "DataNumbers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

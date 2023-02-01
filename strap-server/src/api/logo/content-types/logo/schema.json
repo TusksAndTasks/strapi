@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "logos",
+  "info": {
+    "singularName": "logo",
+    "pluralName": "logos",
+    "displayName": "logos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section": {
+      "displayName": "tech-section",
+      "type": "component",
+      "repeatable": true,
+      "component": "tech-section.tech-section"
+    }
+  }
+}
