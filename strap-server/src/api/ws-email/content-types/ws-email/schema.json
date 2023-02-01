@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "ws_emails",
+  "info": {
+    "singularName": "ws-email",
+    "pluralName": "ws-emails",
+    "displayName": "WS-email"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    }
+  }
+}

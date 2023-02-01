@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_text_with_optional_data_text_with_optional_data",
+  "info": {
+    "displayName": "text-with-optional-data"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

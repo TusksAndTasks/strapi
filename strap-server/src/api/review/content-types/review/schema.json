@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "Reviews",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "socialLink": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "position": {
+      "displayName": "text-with-optional-data",
+      "type": "component",
+      "repeatable": false,
+      "component": "text-with-optional-data.text-with-optional-data"
+    },
+    "project": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-with-optional-data.text-with-optional-data"
+    }
+  }
+}

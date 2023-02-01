@@ -1,0 +1,105 @@
+include includes/_
+- var server = process.env.NODE_ENV === "development" ? "https://worksolutions.ru/": "/";
+
+-
+    var mainPage = false;
+    var outstaffingPage = false;
+    var pathJs = "tehnicheskiy-audit-web-proektov";
+    var pathCss = "tehnicheskiy-audit-web-proektov";
+    var ogUrlSite = process.env.OG_URL;
+    var description = "Вам нужен профессиональный технический аудит веб-проекта? Можете смело доверить свой проект нам. 32 сотрудника! 12 лет на рынке! Узкая специализация! Звоните 8(863)270-16-44";
+    //- var description = "Вам нужен профессиональный технический аудит в области Front-end? Можете смело доверить свой проект нам. 32 сотрудника! 12 лет на рынке! Узкая специализация! Звоните 8(863)270-16-44";
+    var title = "Заказать технический аудит веб-проектов | Компания «Work Solutions»";
+
+    var openGraphMeta = {
+        title: title,
+        type: "article",
+        locale: "ru_RU",
+        description: description,
+        image: ogUrlSite + "/i/og/og-image.png",
+        url: ogUrlSite + "/tehnicheskiy-audit-web-proektov/",
+        siteName: "Work Solutions"
+    };
+
+
+    var titleFirst = [
+        {text: "Технический", highlighted: false},
+        {text: "аудит", highlighted: false},
+        {text: "веб-проектов", highlighted: false}
+    ];
+
+    var headerAudit = 'Что анализируем в рамках технического аудита';
+    var listAudit = [
+        ['Анализ с помощью готовых инструментов','Исследование запросов через API','Анализ внешних скриптов','Нагрузочное тестирование'],
+        ['Семантический и статический анализ кодовой базы','Анализ безопасности','Профилирование и нагрузочное тестирование','Анализ сетевой инфраструктуры'],
+    ]
+
+    var articlesAudit = [
+        {
+            categoryId: null,
+            url: server + "useful/Tehnicheskiy-audit-backenda",
+            announceImage: server + "uploads/2_Uxy_N_Gu6e_Oo_Ett_F4f3_Ouj3_Qqo_Fh3eudj_Nt_Lxb9_Y3_98059a1cf3.jpeg",
+            title: "Технический аудит бэкенда",
+        },
+        {
+            categoryId: null,
+            url:  server + "blog/frontend-audit",
+            announceImage: server + "uploads/audit_bd3ecff239.jpg",
+            title: "Технический аудит фронтенда",
+        }
+    ]
+
+    var benefitCardHeadlineTag = "h3";
+    var benefitHeadTitle = "Преимущества компании «Work Solutions»";
+
+    var customServices = [
+        {
+            title: "Подключаем старших специалистов",
+            desc: "Умения писать код недостаточно, нужно уметь его оптимизировать."
+        },
+        {
+            title: "Проводим аудит в несколько этапов",
+            desc: "Отмечаем не только проблемы, но и возможные риски при масштабировании проекта."
+        },
+        {
+            title: "Предоставляем документ с результатами аудита",
+            desc: "Документ содержит результаты исследований и рекомендации по оптимизации приложения."
+        }
+    ];
+
+    var developmentTypes = [
+        {name: "Технический аудит Frontend", link: "/tehnicheskiy-audit-frontend/"},
+        {name: "Технический аудит Backend", link: "/tehnicheskiy-audit-backend/"},
+        {name: "Strapi разработка", link: "/outstaffing-strapi/"},
+    ];
+
+
+    var outstaffPricesContext = {
+        minWage: "3 000",
+        type: 'Веб-проектов',
+    };
+
++structure(
+    title,
+    description,
+    "Контакты, Work Solutions, Телефон, Адрес, Почта, Рабочие решения",
+    "",
+    {
+        footer: true
+    },
+    openGraphMeta
+)
+    +firstScreenOutstaffing(titleFirst)
+    +auditAnalyzing(
+        headerAudit, listAudit, articlesAudit
+    )
+    +certificationDevelopers("Сертифика&shy;ция разработчиков")
+    +outstaffBenefits(
+        benefitHeadTitle,
+        benefitCardHeadlineTag
+    )
+    +reviews("Отзывы")
+    +approachToWork(customServices)
+    +ourPartners
+    +formPriceAudit(outstaffPricesContext)
+    +outstaffSeeAlso(developmentTypes)
